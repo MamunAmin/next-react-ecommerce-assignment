@@ -19,9 +19,9 @@ This project have six pages. Those are:
 - **Context API** is used for state management.
 
 Installation:
-•	Clone this repo or download and extract it on your PC.
-•	Open command prompt and go to the project directory.
-•	Run `npm install` for download dependencies
-•	 Run `npm run dev` for development server
-•	Open browser and go to localhost:3000
-•	✨  MAGIC ✨
+-	Clone this repo or download and extract it on your PC.
+-	Open command prompt and go to the project directory.
+-	Run `npm install` for download dependencies
+-	Run `npm run dev` for development server
+-	Open browser and go to localhost:3000
+-	✨  MAGIC ✨
