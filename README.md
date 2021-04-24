@@ -23,5 +23,5 @@ Installation:
 -	Open command prompt and go to the project directory.
 -	Run `npm install` for download dependencies
 -	Run `npm run dev` for development server
--	Open browser and go to localhost:3000
+-	Open browser and go to ***localhost:3000***
 -	✨  MAGIC ✨
