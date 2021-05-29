@@ -6,11 +6,11 @@ During my internship in **Astha IT Ventures**, I did this as my ***NextJS/ReactJ
 This project have six pages. Those are:
 
     1. Product List (Home)
-    2.	Product Details
-    3.	Cart
-    4.	Checkout
-    5.	My Orders
-    6.	Order Details (Invoice)
+    2. Product Details
+    3. Cart
+    4. Checkout
+    5. My Orders
+    6. Order Details (Invoice)
 
 ## Others:
 - Data is saved on **JSON** file
