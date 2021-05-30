@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 
 const Checkout = () => {
     const { cart, addToCart } = useCartContext();
+    let cartArray = Array.from(cart);
 
     const router = useRouter();
     const classes = useStyles();
@@ -13,7 +14,7 @@ const Checkout = () => {
         event.preventDefault()
 
         let totalAmount = 0
-        const orderedProduct = cart.map(item => {
+        const orderedProduct = cartArray.map(item => {
             let subTotal = item.price * item.quantity;
             totalAmount += subTotal;
             return { ...item, price: subTotal }

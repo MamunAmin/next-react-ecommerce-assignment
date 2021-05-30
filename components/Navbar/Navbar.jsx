@@ -10,9 +10,10 @@ import useStyles from './styles';
 const Navbar = () => {
   const classes = useStyles();
   const { cart } = useCartContext();
+  let cartArray = Array.from(cart);
 
   let cartLnth = 0;
-  cart.map(prod => {
+  cartArray.map(prod => {
     cartLnth += prod.quantity
   })
 

@@ -8,6 +8,7 @@ import useStyles from './styles';
 const Cart = () => {
     const classes = useStyles();
     const { cart, addToCart } = useCartContext()
+    let cartArray = Array.from(cart);
 
     const removeItem = (product) => {
         let updatedCart = cart.filter(prod => {
@@ -18,7 +19,7 @@ const Cart = () => {
 
     const totalAmount = () => {
         let ans = 0;
-        cart.map(prod => {
+        cartArray.map(prod => {
             ans += (prod.price * prod.quantity);
         })
         return ans;
@@ -40,7 +41,7 @@ const Cart = () => {
     const renderCart = () => (
         <>
             <Grid container spacing={2}>
-                {cart.map((cartItem) => (
+                {cartArray.map((cartItem) => (
                     <Grid item xs={12} sm={6} md={3}>
                         <Card className="cart-item">
                             <CardMedia image={cartItem.image} alt={cartItem.name} className={classes.media} />

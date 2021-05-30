@@ -25,6 +25,7 @@ const StyledTableRow = withStyles((theme) => ({
 
 export default function OrderDetails({ Order }) {
   const classes = useStyles();
+  let orderArray = Array.from(Order);
 
   return (
     <div className={classes.flow}>
@@ -85,7 +86,7 @@ export default function OrderDetails({ Order }) {
             </TableHead>
 
             <TableBody>
-              {Order.products.map((item) => (
+              {orderArray.products.map((item) => (
                 <StyledTableRow key={item.id}>
                   <StyledTableCell component="th" scope="row">
                     {item.id}

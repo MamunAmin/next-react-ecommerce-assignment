@@ -23,7 +23,8 @@ export default function AddToCartButton({ product, key }) {
     const classes = useStyles();
     const { cart, addToCart } = useCartContext()
     let qnty = 0;
-    cart.map(item => {
+    let cartArray = Array.from(cart);
+    cartArray.map(item => {
         if (item.id === product.id)
             qnty = item.quantity;
     })
@@ -32,7 +33,8 @@ export default function AddToCartButton({ product, key }) {
     useEffect(() => {
         if (state.quantity) {
             let alreadyExist = false
-            let newCart = cart.map(prod => {
+            let cartArray = Array.from(cart);
+            let newCart = cartArray.map(prod => {
                 if (prod.id === product.id) {
                     prod.quantity = state.quantity
                     alreadyExist = true

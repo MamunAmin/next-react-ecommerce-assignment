@@ -25,6 +25,7 @@ const StyledTableRow = withStyles((theme) => ({
 
 export default function Order({ Orders }) {
   const classes = useStyles();
+  let orderArray = Array.from(Orders);
 
   return (
     <Grid container justify="center">
@@ -50,7 +51,7 @@ export default function Order({ Orders }) {
                 </TableHead>
 
                 <TableBody>
-                  {Orders.map((item) => (
+                  {orderArray.map((item) => (
                     <StyledTableRow key={item.id}>
                       <StyledTableCell component="th" scope="row">
                         {item.id}
