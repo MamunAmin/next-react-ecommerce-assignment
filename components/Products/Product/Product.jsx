@@ -21,7 +21,7 @@ const Product = ({ product }) => {
 
     useEffect(() => {
         let qty = 0;
-        let cartArray = Array.from(cartArray);
+        let cartArray = Array.from(cart);
         cartArray.map(prod => {
             if (prod.id === product.id) {
                 qty = prod.quantity;
@@ -33,7 +33,7 @@ const Product = ({ product }) => {
     useEffect(() => {
         if (state.quantity) {
             let alreadyExist = false;
-            let cartArray = Array.from(cartArray);
+            let cartArray = Array.from(cart);
             let newCart = cartArray.map(prod => {
                 if (prod.id === product.id) {
                     prod.quantity = state.quantity
