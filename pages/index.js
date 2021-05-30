@@ -1,5 +1,6 @@
 import { Products } from '../components';
 import styles from '../styles/Home.module.css';
+import { server } from '../config';
 
 export default function Home({ products }) {
   return (
@@ -10,7 +11,7 @@ export default function Home({ products }) {
 }
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost:3000/api/products`)
+  const res = await fetch(`${server}/api/products`)
   const Products = await res.json()
 
   return {

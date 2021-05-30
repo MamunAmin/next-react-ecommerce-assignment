@@ -1,5 +1,6 @@
 import { ProductDetails } from '../../components';
 import { Grid } from '@material-ui/core';
+import { server } from '../config';
 
 export default function productDetails({ product }) {
     return (
@@ -15,7 +16,7 @@ export default function productDetails({ product }) {
 }
 
 export const getServerSideProps = async (context) => {
-    const res = await fetch(`http://localhost:3000/api/products`)
+    const res = await fetch(`${server}/api/products`)
     const Products = await res.json()
     let product = null;
     Products.map(item => {

@@ -1,6 +1,6 @@
 import { OrderDetails } from '../../components';
 import { Grid } from '@material-ui/core';
-
+import { server } from '../config';
 
 export default function orderDetails({ order }) {
     return (
@@ -16,7 +16,7 @@ export default function orderDetails({ order }) {
 }
 
 export const getServerSideProps = async (context) => {
-    const res = await fetch(`http://localhost:3000/api/orders`)
+    const res = await fetch(`${server}/api/orders`)
     const orders = await res.json()
 
     let order = null;
