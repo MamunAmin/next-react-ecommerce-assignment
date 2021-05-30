@@ -1,5 +1,5 @@
 import { Order } from '../../components';
-import { server } from '../config';
+import { server } from '../../config';
 
 
 const order = ({ Orders }) => {

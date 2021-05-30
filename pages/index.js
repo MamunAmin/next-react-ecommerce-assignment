@@ -1,6 +1,6 @@
 import { Products } from '../components';
 import styles from '../styles/Home.module.css';
-import { server } from '../config';
+import { server} from '../config';
 
 export default function Home({ products }) {
   return (

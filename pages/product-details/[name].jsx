@@ -1,6 +1,6 @@
 import { ProductDetails } from '../../components';
 import { Grid } from '@material-ui/core';
-import { server } from '../config';
+import { server } from '../../config';
 
 export default function productDetails({ product }) {
     return (
