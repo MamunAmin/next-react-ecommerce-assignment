@@ -4,6 +4,7 @@ import useStyles from './styles';
 
 const Products = ({ Products }) => {
     const classes = useStyles();
+    Products = Array.from(Products);
     return (
         <main className={classes.content}>
             <div className={classes.toolbar} />
