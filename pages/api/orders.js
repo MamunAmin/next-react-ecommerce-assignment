@@ -13,7 +13,6 @@ export default (req, res) => {
     }
     else{
         let data = fs.readFileSync("data/orders.json",'utf8');
-        res.setHeader('Content-Type', 'application/json');
         res.status(200).json(JSON.parse(data));
     }
 }
