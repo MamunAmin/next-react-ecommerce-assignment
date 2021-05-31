@@ -13,7 +13,7 @@ export default function Home({ products }) {
 export const getServerSideProps = async (context) => {
   if(!dev) {
     let fs = require('fs');
-    let data = fs.readFileSync("data/products.json", 'utf8');
+    let data = fs.readFileSync("../data/products.json", 'utf8');
     var Products = JSON.parse(data)
   }
   else {
